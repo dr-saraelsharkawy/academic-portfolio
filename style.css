@@ -2357,22 +2357,36 @@ body {
 
     .publications {
         width: 100%;
-        box-sizing: border-box;
+        max-width: 100%;
         padding-left: 18px;
         padding-right: 18px;
+        box-sizing: border-box;
         overflow-x: hidden;
     }
 
     .publications-grid {
         width: 100%;
-        grid-template-columns: 1fr;
+        max-width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
         box-sizing: border-box;
     }
 
     .publication-card {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .publication-card h3,
+    .publication-card p,
+    .publication-card .journal {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
 }
