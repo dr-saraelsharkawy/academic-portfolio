@@ -2318,39 +2318,61 @@ body {
 
     .journey {
         width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        justify-content: flex-start;
-        gap: 35px;
-        padding: 0 20px 12px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 10px;
         box-sizing: border-box;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-    }
-
-    .journey::-webkit-scrollbar {
-        height: 5px;
-    }
-
-    .journey::-webkit-scrollbar-thumb {
-        background: #7B5CFA;
-        border-radius: 10px;
-    }
-
-    .journey::-webkit-scrollbar-track {
-        background: #eeeeee;
-        border-radius: 10px;
-    }
-
-    .station {
-        flex: 0 0 80px;
+        transform: none;
     }
 
     .journey-line {
-        position: absolute;
         left: 40px;
-        right: auto;
-        width: 425px;
+        right: 40px;
+        width: auto;
+        height: 4px;
+        top: 30px;
+    }
+
+    .station {
+        width: 65px;
+        flex-shrink: 1;
+    }
+
+    .circle {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+        border-width: 4px;
+    }
+
+    .station span {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .publications {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 18px;
+        padding-right: 18px;
+        overflow-x: hidden;
+    }
+
+    .publications-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+    .publication-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
 }
