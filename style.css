@@ -2313,3 +2313,43 @@ body {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .journey {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        gap: 35px;
+        padding: 0 20px 10px;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .journey::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .journey::-webkit-scrollbar-thumb {
+        background: #7B5CFA;
+        border-radius: 10px;
+    }
+
+    .journey::-webkit-scrollbar-track {
+        background: #eeeeee;
+        border-radius: 10px;
+    }
+
+    .station {
+        flex: 0 0 80px;
+    }
+
+    .journey-line {
+        left: 40px;
+        right: auto;
+        width: 425px;
+    }
+
+}
