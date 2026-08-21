@@ -1364,7 +1364,29 @@ body {
     border-radius: 16px;
 }
 
+.event-video-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    background: #6d5efc;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
+.event-video-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.event-video-btn i {
+    font-size: 14px;
+}
 /* ==================================================
    INTERNATIONAL ENGAGEMENT
 ================================================== */
