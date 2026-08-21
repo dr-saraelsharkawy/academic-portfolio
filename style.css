@@ -855,22 +855,79 @@ body {
     transform: translateY(-5px);
 }
 
+/* Award Title */
+
 .award-card h3 {
     color: #6d5efc;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
-.award-card span {
-    display: block;
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 10px;
+/* Date + Location */
+
+.award-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    font-size: 14px;
+    color: #777;
+
+    margin-bottom: 18px;
 }
+
+.award-meta i {
+    color: #b08900;
+}
+
+.award-meta i:nth-of-type(2) {
+    margin-left: 10px;
+}
+
+/* Course / Event */
 
 .award-card p {
     color: #444;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Presented Paper */
+
+.award-paper {
+    margin-top: 18px;
+    text-align: justify;
+}
+
+.award-paper strong {
+    color: #6d5efc;
+}
+
+/* Certificate Image */
+
+.award-card img {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+    height: 190px;
+
+    object-fit: cover;
+
+    margin: 25px auto 0;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.award-card img:hover {
+    transform: scale(1.04);
 }
 
 
