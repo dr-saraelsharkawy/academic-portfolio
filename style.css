@@ -822,7 +822,7 @@ body {
 
 
 /* ==================================================
-   AWARDS
+   AWARDS & HONORS
 ================================================== */
 
 .awards {
@@ -836,101 +836,271 @@ body {
     margin-bottom: 50px;
 }
 
+
+/* ==================================================
+   AWARDS GRID
+================================================== */
+
 .awards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+
+/* ==================================================
+   AWARD CARD
+================================================== */
 
 .award-card {
     background: #fffaf3;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
     border-left: 4px solid #b08900;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .award-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Award Title */
+
+/* ==================================================
+   AWARD TITLE
+================================================== */
 
 .award-card h3 {
     color: #6d5efc;
     font-size: 18px;
-    margin-bottom: 15px;
+    line-height: 1.4;
+    margin: 0 0 15px;
 }
 
-/* Date + Location */
+
+/* ==================================================
+   DATE + LOCATION
+================================================== */
 
 .award-meta {
     display: flex;
     align-items: center;
-    gap: 8px;
     flex-wrap: wrap;
-
-    font-size: 14px;
-    color: #777;
+    gap: 12px 20px;
 
     margin-bottom: 18px;
+
+    font-size: 13px;
+    color: #777;
+}
+
+.award-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .award-meta i {
     color: #b08900;
+    font-size: 14px;
 }
 
-.award-meta i:nth-of-type(2) {
-    margin-left: 10px;
-}
 
-/* Course / Event */
+/* ==================================================
+   MAIN DESCRIPTION
+================================================== */
 
 .award-card p {
     color: #444;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 15px;
 }
 
-/* Presented Paper */
+
+/* ==================================================
+   PRESENTED PAPER / RESEARCH
+================================================== */
 
 .award-paper {
-    margin-top: 18px;
-    text-align: justify;
+    background: #f7f3ed;
+    padding: 15px;
+    border-radius: 10px;
+
+    margin-top: 5px !important;
+    margin-bottom: 18px !important;
+
+    font-size: 14px !important;
+    line-height: 1.7 !important;
 }
 
 .award-paper strong {
     color: #6d5efc;
 }
 
-/* Certificate Image */
 
-.award-card img {
-    display: block;
+/* ==================================================
+   GRANT AMOUNT
+================================================== */
 
-    width: 100%;
-    max-width: 300px;
-    height: 190px;
-
-    object-fit: cover;
-
-    margin: 25px auto 0;
-
-    border-radius: 12px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+.award-amount {
+    margin-top: 0;
+    color: #444;
 }
 
-.award-card img:hover {
-    transform: scale(1.04);
+.award-amount strong {
+    color: #b08900;
 }
 
 
+/* ==================================================
+   CERTIFICATE BUTTON
+================================================== */
+
+.certificate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    align-self: flex-start;
+
+    margin-top: auto;
+    padding: 8px 14px;
+
+    background: #6d5efc;
+    color: white;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.certificate-btn i {
+    font-size: 13px;
+}
+
+.certificate-btn:hover {
+    background: #5849d6;
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .awards {
+        padding: 70px 30px;
+    }
+
+    .awards h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .award-card {
+        padding: 22px;
+    }
+
+    .award-card h3 {
+        font-size: 17px;
+    }
+
+    .award-card p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .awards {
+        padding: 60px 18px;
+    }
+
+    .awards h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .award-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .award-card h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .award-meta {
+        gap: 8px 15px;
+        font-size: 12px;
+    }
+
+    .award-meta span {
+        max-width: 100%;
+    }
+
+    .award-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .award-paper {
+        padding: 13px;
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .award-amount {
+        font-size: 14px !important;
+    }
+
+    .certificate-btn {
+        font-size: 12px;
+        padding: 8px 13px;
+    }
+
+}
 /* ==================================================
    PROJECTS
 ================================================== */
